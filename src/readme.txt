@@ -4,7 +4,7 @@ cordova - https://cordova.apache.org/
 android studio - https://developer.android.com/studio
 pd - https://puredata.info/
 
-The app also need cordova plugins:
+The app also some need cordova plugins:
 
 https://www.npmjs.com/package/cordova-plugin-device-orientation
 https://www.npmjs.com/package/cordova-plugin-geolocation
