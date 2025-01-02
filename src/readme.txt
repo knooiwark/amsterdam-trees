@@ -17,7 +17,7 @@ There is also a server side required for this app. Currently this is all still t
 
 - A query returning data from the http request
 - a MySQL database with the tree data (about 300.000 trees). Do note this dataset is not up to date anymore. Get the latest dataset here: https://api.data.amsterdam.nl/v1/docs/datasets/bomen.html)
-- a lot of maptiles in png format which are retrieved by the leaflet.js to render the city map background image
+- a lot of maptiles in png format which are retrieved by leaflet.js to render the city map background image. These maptiles are created using QGis.
 
 Please feel free to contact me if you would like to get in touch if you would like more info/details about the serverside implementation. 
 
