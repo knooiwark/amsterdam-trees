@@ -7,7 +7,7 @@ But there is also (kind of) GOOD NEWS!
 -------------------------------------
 For those who still want to try out the app...there is a crappy workaround:
 
-1. Download the file [amsterdam_trees.apk](https://github.com/knooiwark/amsterdam-trees/blob/main/amsterdam_trees.apk) to your android device
+1. Download the file amsterdam_trees.apk to your android device
 2. If neccesary, make sure it's allowed to install from the location where you have put the apk file
 3. While installing the apk it will tell you it's unsafe... (you have to trust me here...)
 4. Click on 'more details' and 'install anyway'
