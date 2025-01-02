@@ -15,6 +15,15 @@ https://www.npmjs.com/package/cordova-plugin-geolocation
 https://www.npmjs.com/search?q=cordova-plugin-insomnia
 https://www.npmjs.com/package/org.urbanstew.cordova.pd
 
+IMPORTANT!
+--------------------------------------------------
+The app is using data from the knooiwark server which is available as it is...)
+
+- MySQL database with the ree data (about 300.000 trees)
+- A lot of maptiles (png's)
+
+Feel free to contact me if you are interested in this part.
+
 
 
 
