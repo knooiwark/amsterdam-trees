@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'"> -->
+
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+
+        <!--meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /--->
+        <link rel="stylesheet" href="libs/leaflet/leaflet.css" />
+
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Amsterdam Trees</title>
+    </head>
+    <body id="body">
+        <div id="app">
+
+          <div id="splash">
+            <div id="title-amsterdam">AMSTERDAM</div>
+            <div id="title-trees">TREES</div>
+            <div id="tap-to-continue">TAP TO CONTINUE...</div>
+          </div>
+
+          <div id="main-menu" class="screen">
+
+            <h1 id="menu-title" class='title'>MENU</h1>
+
+            <div id="buttons-screen">
+              <button class="button" id="start-button">START</button>
+              <button class="button" id="about-button">ABOUT</button>
+              <button class="button" id="credits-button">CREDITS</button>
+              <button class="button" id="options-button">OPTIONS</button>
+            </div>
+          </div>
+
+          <div id="about-screen" class="screen">
+            <h1 id="about-title" class='title'>ABOUT</h1>
+            <div id="about-container">
+              <h2 class="subtitle">AMSTERDAM TREES</h2>
+              <p class="text">
+                This app is generating a soundscape using data from the trees around you.
+                Walk around and enjoy an intense relationship with the great green giants of beautiful Amsterdam through a continuously changing melody!
+              </p>
+              <p class="text">This app can also be used to get info about the trees by touching the circles on the map.</p>
+
+              <h2 class="subtitle">KNOOIWARK</h2>
+              <p class="text">Knooiwark is a one-person indie production studio by Geert Dijkstra into exploring new ways of making music.</p/>
+              <p class="text">If you like thise app, please consider a small donation or listen to the music of Knooiwark on Spotify</p>
+
+              <div id="about-knooiwark-buttons">
+                <a id="bmc-button" href="https://www.buymeacoffee.com/geertdijkstra" target="_blank"></a>
+                <a id="spotify-button" href="https://open.spotify.com/artist/2H5usVpZeDh7F4hiEEHaSo?si=FnX1GQBtQC6BI-KrZ8tMMQ" target="_blank"></a>
+              </div>
+
+            </div>
+            <button class="button" id="back-button-about">BACK</button>
+          </div>
+
+          <div id="credits-screen" class="screen">
+            <h1 id="credits-title" class="title">CREDITS</h1>
+            <div id="credits-container">
+              <h2 class="subtitle">LEAFLET</h2>
+              <p class="text">
+                Leaflet.js is an open source render engine library for interactive maps.
+                Special thanks ar going to Volodymyr Agafonkin from the Ukraine for developing this awesome free to use javascript library!
+                Make peace, not war.
+              </p>
+              <!-- <p class="credits-text">Make peace not war.</p> -->
+              <h2 class="subtitle">TREE DATA</h2>
+              <p class="text">Thanks are also going to the Municipality of Amsterdam for doing all the hard work to collect, store and share data of the incredible amount of approximately 400,000 trees in Amsterdam.</p>
+            </div>
+          <button class="button" id="back-button-credits">BACK</button>
+          </div>
+
+
+          <div id="options-screen" class="screen">
+            <h1 id="options-title" class='title'>OPTIONS</h1>
+
+            <div id="options-container">
+
+              <h2 class="subtitle">SOUND OFF/ON</h2>
+              <div class="switch-container">
+                <label class="switch">
+                  <input id="checkbox-sound" type="checkbox">
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <h2 class="subtitle">MODE</h2>
+              <label class="mode-container">Acoustic
+                <input type="radio" id='acoustic' name="radio">
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="mode-container">Aeolian
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="mode-container">Adonai Malakh
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="mode-container">Byzantine
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="mode-container">Double Harmonic
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="mode-container">Enigmatic
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="mode-container">Freygish Ahava Raba
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="mode-container">Gypsy
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="mode-container">Istrian
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="mode-container">Neapolitan Minor
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="mode-container">Ukrainian Dorian
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="mode-container">Whole Tone
+                <input type="radio" checked="checked" name="radio">
+                <span class="checkmark"></span>
+              </label>
+
+              </div>
+
+            <button class="button" id="back-button-options">BACK</button>
+          </div>
+
+          <div id="warning-screen">
+            <p class="warning-text">Oops, the location of your device could not be found.</p>
+            <p class="warning-text">Please make sure there is an internet connection and try again.</p>
+            <button class="button back-button" id="back-button-warning">BACK</button>
+          </div>
+
+
+          <div id="mapDiv">
+          </div>
+
+        </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="libs/leaflet/leaflet.js"></script>
+        <script src="libs/turf/turf.min.js"></script>
+
+
+        </script>
+        <script src="libs/jquery/jquery.min.js"></script>
+        <script src="libs/velocity/velocity.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/pitches.js"></script>
+
+    </body>
+</html>

@@ -1,1 +1,419 @@
 
+@font-face {
+  font-family: 'impact';
+  src: url('../fonts/impact.ttf');
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color: black;
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    font-size:12px;
+    height:100vh;
+    margin:0px;
+    padding:0px;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-right, 0px);
+    /*text-transform:uppercase;*/
+    width:100%;
+}
+
+/*** MAIN APP ***/
+#app {
+  height: 100vh;
+}
+
+/*** SPLASH MENU ***/
+#splash{
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-image: url(../img/bg.png);
+  opacity: 0;
+  text-align: center;
+}
+#title-amsterdam{
+  padding-top: 45%;
+  color: #bdbb81;
+  font-size: 1.5em;
+  letter-spacing: 12px;
+}
+#title-trees{
+  font-family: impact;
+  margin: auto;
+  color: #528e93;
+  font-size: 8em;
+  letter-spacing: 2px;
+  padding: 0;
+  line-height: 0.75;
+  margin-top: 12px;
+}
+#tap-to-continue{
+  position: absolute;
+  left: 0;
+  right:0;
+  top: 80%;
+  bottom: 0;
+  margin: auto;
+  color: #aaaaaa;
+  text-align: center;
+  font: 1.0em;
+}
+
+/*** GENERIC ***/
+.title{
+  font-family: impact;
+  text-align: center;
+  font-size: 5.5em;
+  letter-spacing: 9px;
+  margin: 0;
+  padding: 15% 0;
+  padding-bottom: 5%;
+  color: #87dd96;
+}
+.subtitle{
+  margin: 0;
+  color: white;
+}
+.text{
+  font-size: 1.0em;
+  color: white;
+  margin-top: 0;
+  line-height: 1.3;
+}
+.screen{
+  background-color: #528e93;
+}
+.button{
+  background-color: #76aeb1;
+  color: white;
+  font-size: 2.0em;
+  text-align: center;
+  letter-spacing: 3px;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  margin: auto;
+  border-radius: 12px;
+  height: 7%;
+  width: 50%;
+  border: none;
+}
+
+
+/*** MENU ***/
+#main-menu{
+  height: 100vh;
+  text-align: justify;
+  display: none;
+  background-repeat: no-repeat;
+  background-size:cover;
+  opacity: 0;
+}
+/*** BUTTONS ***/
+#buttons-screen{
+  height: auto;
+  opacity: 1;
+  display: block;
+}
+#start-button{
+  top: 60%;
+}
+#about-button{
+  top: 70%;
+}
+#credits-button{
+  top: 80%;
+}
+#options-button{
+  top: 90%;
+}
+
+/*** ERROR MESSAGE ***/
+#warning-screen{
+  height: 100vh;
+  text-align: center;
+  display: none;
+  background-color: #666666;
+  opacity: 0;
+}
+.warning-text{
+  font-size: 2em;
+  color: white;
+  margin: 35% 5%;
+}
+/*** ABOUT ***/
+#about-screen{
+  height: 100vh;
+  display: none;
+  opacity: 0;
+}
+#about-container{
+  padding-top: 5%;
+  margin: auto;
+  width: 90%;
+}
+#about-knooiwark-buttons{
+  text-align: center;
+  margin-bottom: 10px;
+}
+#bmc-button{
+  width: 200px;
+  height: 50px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../img/bmc-button.svg);
+}
+#spotify-button{
+  margin: 0;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../img/spotify.svg);
+}
+#back-button-about{
+  top: 90%;
+}
+
+/*** creditsScreen ***/
+#credits-screen{
+  height: 100vh;
+  display: none;
+  opacity: 0;
+}
+#credits-container{
+  padding-top: 10%;
+  margin: auto;
+  width: 90%;
+}
+#back-button-credits{
+  top: 90%;
+}
+
+/*** optionsScreen ***/
+#options-screen{
+  height: 100vh;
+  display: none;
+  opacity: 0;
+}
+#options-container{
+  width: 90%;
+  margin: auto;
+  margin-top: 5%
+}
+.switch-container{
+  text-align: center;
+  margin: 2%;
+}
+.switch{
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #416768;
+  transition: .4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #518e91;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider{
+  background-color: white;
+}
+input:checked + .slider:before{
+  transform: translateX(26px);
+}
+
+/* Customize the label (the container) */
+.mode-container{
+  display: block;
+  position: relative;
+  padding-left: 40%;
+  font-size: 1.0em;
+  user-select: none;
+  margin-bottom: 8px;
+  color: white;
+}
+/* hide default */
+.mode-container input{
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width:0;
+}
+/* create custom */
+.checkmark{
+  position: absolute;
+  top: 0;
+  left: 30%;
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 50%;
+}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after{
+  content: "";
+  position: absolute;
+  display: none;
+}
+/* Show the indicator (dot/circle) when checked */
+.mode-container input:checked ~.checkmark:after{
+  display: block;
+}
+/* Style the indicator (dot/circle) */
+.mode-container .checkmark:after {
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #416768;
+}
+
+#back-button-options{
+  top: 90%;
+}
+
+/*** THE MAP **/
+#mapDiv{
+  width: 100%;
+  height: 0px;
+  opacity: 0;
+}
+
+/*** TREE CIRCLE COLORS ***/
+.Overig{background-color: #8c7fd3;}
+.Acer{background-color: #cf5b59;}
+.Aesculus{background-color: #da8152;}
+.Alnus{background-color: #af8f07;}
+.Betula{background-color: #ae4c7c;}
+.Carpinus{background-color: #6e7846;}
+.Crataegus{background-color: #ad7d7d;}
+.Fraxinus{background-color: pink;}
+.Onbekend{background-color: #d87648;}
+.Platanus{background-color: #d9aea6;}
+.Populus{background-color: #81a592;}
+.Prunus{background-color: #e8b87c;}
+.Quercus{background-color: #e8d743;}
+.Robinia{background-color: #84d463;}
+.Salix{background-color: #a8d9c7;}
+.Tilia{background-color: #d0b957;}
+.Ulmus{background-color: #ab864b;}
+
+.tree{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  /*border: 1px solid white;*/
+  box-shadow: 0px 0px 8px white;
+  opacity: 0.5;
+  transition: opacity;
+}
+.high-opacity{
+  opacity: 0.9;
+  animation-name: light;
+  animation-duration: 0.1s;
+}
+.low-opacity{
+  animation-name: dim;
+  animation-duration: 1.0s;
+}
+@keyframes light {
+  from{opacity: 0.5;}
+  to{opacity: 0.9;}
+}
+@keyframes dim {
+  from{opacity: 0.9;}
+  to{opacity: 0.5;}
+}
+
+
+/* On screens that are 900px or more */
+@media screen and (min-width: 900px) {
+
+  #title-trees{
+    font-size: 16em;
+  }
+  #title-amsterdam {
+    font-size: 4.5em;
+  }
+  #tap-to-continue {
+      font-size: 2em;
+  }
+  .title {
+    font-size: 10.0em;
+  }
+  .button {
+    font-size: 4em;
+  }
+  .about-subtitle{
+    font-size: 3.0em;
+  }
+  .credits-subtitle{
+    font-size: 3.0em;
+  }
+  .about-text{
+    font-size: 2.0em;
+  }
+  .credits-text{
+    font-size: 2.0em;
+  }
+  #bmc-button {
+    width: 300px;
+    height: 75px;
+  }
+  #spotify-button {
+    width: 75px;
+    height: 75px;
+  }
+  .options-subtitle {
+      font-size: 3em;
+  }
+  .mode-container {
+    font-size: 2em;
+  }
+  .checkmark{
+    width: 32px;
+    height: 32px;
+  }
+  .checkmark:after {
+    top: 7px;
+    left: 7px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+  /* On screens that are 350px or less */
+  @media screen and (max-width: 350px) {
+    .text{
+      font-size: 0.75em;
+  }
+}
