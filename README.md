@@ -15,3 +15,4 @@ For those who still want to try out the app...there is a crappy workaround:
 6. The install should continue and you are ready to use the app!
 7. Enjoy :)
 
+And for those who are interested in the source code, check the src folder.
