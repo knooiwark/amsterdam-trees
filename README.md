@@ -1,7 +1,8 @@
 # amsterdam-trees
 Amsterdam Trees is an experimental music app which synthesize music in real time based on the trees of beautiful Amsterdam. Walk or bike around and experience an connection with the trees around you.
    
-![functionele afbeelding](https://github.com/user-attachments/assets/36ac846b-a7cc-4e19-94a5-f41b957b27a4)
+![amsterdamtrees_screenshot1](https://github.com/user-attachments/assets/88c61576-8042-40a7-8093-4ee37ad2b9f9)
+
 
 This app was a lot of hard work to make. It takes to much time and effort to keep it updated to contineous changing policy requirements rules. So unfortenately the app is no longer available in the google play store...
 
